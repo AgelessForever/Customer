@@ -1,0 +1,108 @@
+package com.guigu.customer.model;
+/**       
+ * <p>project_name:Customer</p>
+ * <p>package_name:com.guigu.customer.model.Customer</p>
+ * <p>description：</p>
+ * <p>@author：刘老师<p>   
+ * <p> date:2018年1月3日下午1:49:00 </p>
+ * <p>comments：    </p>
+ * <p>@version  jdk1.8</p>
+ * 
+ * <p>Copyright (c) 2018, 980991634@qq.com All Rights Reserved. </p>    
+ */
+
+import java.util.Date;
+
+public class Customer {
+
+    private String id;
+
+    private String name;
+
+    private String gender;
+
+    private Date birthday;
+
+    private String cellphone;
+
+    private String email;
+
+    private String preference;
+
+    private String type;
+
+    private String description;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
+    }
+
+    public String getCellphone() {
+        return cellphone;
+    }
+
+    public void setCellphone(String cellphone) {
+        this.cellphone = cellphone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPreference() {
+        return preference;
+    }
+
+    public void setPreference(String preference) {
+        this.preference = preference;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+}

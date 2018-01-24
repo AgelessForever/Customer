@@ -1,0 +1,4 @@
+jdbc.username=root
+jdbc.password=root
+jdbc.url=jdbc:mysql://192.168.118.5:3306/guigu
+jdbc.driver=com.mysql.jdbc.Driver

@@ -1,0 +1,89 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script src="${pageContext.request.contextPath }/js/user.js" type="text/javascript" charset="utf-8"></script>
+	
+	
+	<body onload="pageInit()">
+		<form action="AddCustomerServlet" method="post" name="form1" id="customer" onsubmit="return dosubmit()">
+			<table border="1">
+			<tr>
+				<td>用户名：</td>
+				<td><input type="text" name="name" /></td>
+			</tr>
+            <tr>
+				<td>性别:</td>
+				<td>
+					<input type="radio" checked="checked" name="gender" value="male" />男
+					<input type="radio" name="gender" value="female" />女
+				</td>
+			</tr>
+			
+			<tr>
+				<td>生日:</td>
+				<td>
+					<select id="year" >
+						<option name="year" value="1900">1900</option>
+					</select>年
+					<select id="month" >
+						<option name="month" value="01">01</option>
+					</select>月
+					<select id="day">
+						<option name="day" value="01">01</option>
+					</select>日
+					
+				</td>
+			</tr>
+			
+            <tr>
+				<td>手机号:</td>
+				<td><input type="text" name="cellphone" /></td>
+			</tr>
+			
+			 <tr>
+				<td>邮箱:</td>
+				<td><input type="text" name="email" /></td>
+			</tr>
+			
+			<tr>
+				<td>兴趣爱好:</td>
+				<td>
+					<c:forEach var="pre" items="${preferences }">
+						<input type="checkbox" name="pre" value="${pre}">${pre }
+					</c:forEach>
+				</td>
+			</tr>
+			
+			 <tr>
+				<td>客户类型:</td>
+				<td>
+					<c:forEach var="type" items="${types }">
+							<input type="radio" name="type" value="${type}">${type }
+					</c:forEach>
+				</td>
+			</tr>
+			
+			 <tr>
+				<td>备注:</td>
+				<td>
+					<textarea rows="5" cols="50" name="description"></textarea>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					<input type="reset" value="重置" />
+				</td>
+				<td>
+					<input type="submit" value="提交" />
+				</td>
+			</tr>
+		</table>
+		</form>
+	</body>
+</html>
